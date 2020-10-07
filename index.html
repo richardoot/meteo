@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>WeatherJs</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">WeatherJs</a>
+    </nav>
+    <form class="mt-5">
+      <div class="form-group row">
+        <label for="city" class="col-1 col-form-label">Ville : </label>
+        <div class="col-4">
+          <input class="form-control" type="text" id="city" value="Bayonne">
+        </div>
+        <button type="submit" class="btn btn-primary col-2" onclick="searchWeather(event)">Rechercher</button>
+      </div>
+    </form>
+    <br>
+    <div class="jumbotron">
+      <h1 class="display-4">Météo pour <span id="city-title"></span></h1>
+      <div class="row" id="render">
+        <!-- content will appear here -->
+      </div>
+    </div>
+    Propulsé par <a href="https://openweathermap.org/">openweathermap</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
